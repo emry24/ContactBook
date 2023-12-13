@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp.Models;
+﻿namespace Shared.Models;
 
 public class PersonalDataModel
 {

@@ -1,7 +1,7 @@
-﻿using ConsoleApp.Enums;
-using ConsoleApp.Interfaces;
+﻿using Shared.Enums;
+using Shared.Interfaces;
 
-namespace ConsoleApp.Models.Responses;
+namespace Shared.Models.Responses;
 public class ServiceResult : IServiceResult
 {
     public ServiceStatus Status { get; set; }

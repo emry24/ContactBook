@@ -1,8 +1,9 @@
-﻿using ConsoleApp.Models;
+﻿
 using Newtonsoft.Json;
+using Shared.Models;
 using System.Diagnostics;
 
-namespace ConsoleApp.Services;
+namespace Shared.Services;
 
 //public interface IFileService
 //{

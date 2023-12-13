@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp.Interfaces;
+﻿namespace Shared.Interfaces;
 
 public interface IContact
 {

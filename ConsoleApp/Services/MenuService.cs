@@ -1,5 +1,7 @@
-﻿using ConsoleApp.Interfaces;
-using ConsoleApp.Models;
+﻿using Shared.Interfaces;
+using Shared.Models;
+using Shared.Services;
+
 namespace ConsoleApp.Services;
 
 

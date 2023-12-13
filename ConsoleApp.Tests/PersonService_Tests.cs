@@ -1,5 +1,6 @@
-﻿using ConsoleApp.Models;
-using ConsoleApp.Services;
+﻿
+using Shared.Models;
+using Shared.Services;
 
 namespace ConsoleApp.Tests;
 
@@ -17,6 +18,6 @@ public class PersonService_Tests
 
         //Assert
         Assert.NotNull(result);
-        Assert.Equal(Enums.ServiceStatus.SUCCEEDED, result.Status);
+        Assert.Equal(Shared.Enums.ServiceStatus.SUCCEEDED, result.Status);
     }
 }

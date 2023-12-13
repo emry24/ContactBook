@@ -1,18 +1,10 @@
-﻿using ConsoleApp.Interfaces;
-using ConsoleApp.Models;
-using ConsoleApp.Models.Responses;
+﻿using System.Diagnostics;
+using Shared.Models;
+using Shared.Models.Responses;
 using Newtonsoft.Json;
-using System.Diagnostics;
+using Shared.Interfaces;
 
-namespace ConsoleApp.Services;
-
-//public interface IPersonService
-//{
-//    ServiceResult AddToList(IPersonalData person);
-//    ServiceResult DeletePerson(string email);
-//    GetPersonsFromList();
-//    GetPersonByEmail(string email);
-//}
+namespace Shared.Services;
 
 public class PersonService
 {

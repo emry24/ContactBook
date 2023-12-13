@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp.Enums;
+﻿namespace Shared.Enums;
 
 public enum ServiceStatus
 {
