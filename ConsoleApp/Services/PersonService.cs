@@ -2,7 +2,6 @@
 using ConsoleApp.Models;
 using ConsoleApp.Models.Responses;
 using Newtonsoft.Json;
-using System;
 using System.Diagnostics;
 
 namespace ConsoleApp.Services;
