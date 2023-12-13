@@ -19,6 +19,11 @@ public class PersonService
     private readonly FileService _fileService = new FileService(Path.Combine(Environment.CurrentDirectory, "content.json"));
     private List<PersonalDataModel> _persons = new List<PersonalDataModel>();
 
+    /// <summary>
+    /// Adds person to list
+    /// </summary>
+    /// <param name="person">person of type PersonalDataModel</param>
+    /// <returns>Returns response if successful or false if person already exists or fails</returns>
     public ServiceResult AddToList(PersonalDataModel person)
     {
         var response = new ServiceResult();
@@ -50,6 +55,11 @@ public class PersonService
         throw new NotImplementedException();
     }
 
+    /// <summary>
+    /// Delete personfrom list
+    /// </summary>
+    /// <param name="email">Deletes person by email</param>
+    /// <returns>Returns true if person is successfully removed or false if person do not exist</returns>
     public bool DeletePerson(string email)
     {
         try
@@ -67,6 +77,10 @@ public class PersonService
         return false;
     }
 
+    /// <summary>
+    /// Shows all persons from list
+    /// </summary>
+    /// <returns>Returns persons if list is not null or empty</returns>
     public List<PersonalDataModel> GetPersonsFromList()
     {
         try
@@ -82,10 +96,15 @@ public class PersonService
         return _persons;
     }
 
-
+    /// <summary>
+    /// Shows specific details of person in list
+    /// </summary>
+    /// <param name="email">Shows person based on email</param>
+    /// <returns>Returns person if found in list</returns>
 
     public PersonalDataModel GetPersonByEmail(string email)
     {
+
         return _persons.FirstOrDefault(p => p.Email.Equals(email, StringComparison.OrdinalIgnoreCase))!;
     }
 
