@@ -120,7 +120,7 @@ public class MenuService : IMenuService
 
         foreach (var item in persons)
         {
-            Console.WriteLine($"{item.FirstName} {item.Email}");
+            Console.WriteLine($"{item.FirstName} {item.LastName} {item.Email}");
         }
 
         Console.WriteLine();

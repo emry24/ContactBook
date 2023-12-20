@@ -25,7 +25,12 @@ public class PersonService
             if (!_persons.Any(x => x.Email == person.Email))
             {
                 _persons.Add(person);
-                _fileService.SaveContentToFile(JsonConvert.SerializeObject(_persons));
+
+                var existingContent = _fileService.GetContentFromFile();
+                var existingPersons = JsonConvert.DeserializeObject<List<PersonalDataModel>>(existingContent) ?? new List<PersonalDataModel>();
+                existingPersons.Add(person);
+
+                _fileService.SaveContentToFile(JsonConvert.SerializeObject(existingPersons));
                 response.Status = Enums.ServiceStatus.SUCCEEDED;
 
             }
@@ -42,10 +47,6 @@ public class PersonService
         return response;
     }
 
-    public ServiceResult AddToList(IPersonalData person)
-    {
-        throw new NotImplementedException();
-    }
 
     /// <summary>
     /// Delete personfrom list
