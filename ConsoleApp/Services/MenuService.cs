@@ -81,6 +81,11 @@ public class MenuService : IMenuService
 
         _personService.AddToList(personalData);
 
+        Console.WriteLine();
+        Console.WriteLine("Person added successfully. Press any key to continue.");
+
+        Console.ReadKey();
+
     }
 
     private void ShowDeletePersonOption()
@@ -92,10 +97,12 @@ public class MenuService : IMenuService
 
         if (_personService.DeletePerson(emailToDelete!))
         {
+            Console.WriteLine();
             Console.WriteLine("Contact deleted successfully. Press any key to continue.");
         }
         else
         {
+            Console.WriteLine();
             Console.WriteLine("Contact not found. Press any key to continue.");
         }
 
@@ -115,6 +122,9 @@ public class MenuService : IMenuService
         {
             Console.WriteLine($"{item.FirstName} {item.Email}");
         }
+
+        Console.WriteLine();
+        Console.WriteLine("Press any key to go back to MENU OPTIONS.");
 
         Console.ReadKey();
     }
@@ -136,9 +146,13 @@ public class MenuService : IMenuService
             Console.WriteLine($"City: {person.City}");
             Console.WriteLine($"Email: {person.Email}");
             Console.WriteLine($"Phone: {person.Phone}");
+
+            Console.WriteLine();
+            Console.WriteLine("Press any key to go back to MENU OPTIONS.");
         }
         else
         {
+            Console.WriteLine();
             Console.WriteLine("Contact not found. Press any key to continue.");
         }
 
