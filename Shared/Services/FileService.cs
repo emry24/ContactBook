@@ -5,14 +5,6 @@ using System.Diagnostics;
 
 namespace Shared.Services;
 
-//public interface IFileService
-//{
-//    bool SaveContentToFile(string content);
-//    string GetContentFromFile();
-//    bool DeleteContentFromFile(string content);
-//    string GetPersonFromFile();
-//}
-
 internal class FileService(string filePath)
 {
     private readonly string _filePath = filePath;
